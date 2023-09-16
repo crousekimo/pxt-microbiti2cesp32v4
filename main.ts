@@ -158,80 +158,7 @@ namespace microbiti2cesp32v4 {
 	return parseFloat(a)
     } 
 
-	
-    //% group="5.Thingspeak"      
-    //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
-    //% weight=101 
-    export function thingspeak1(key:string, value1: string):void {
-        sendi2cmessage("t="+key+","+value1)
-	basic.pause(200)    
-    }
-	/*
-    //% group="5.Thingspeak"            
-    //% blockId=thingspeak4 
-    //% block="Connect to Thingspeak key %key | Write Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7"
-    //% weight=101  
-    //% blockExternalInputs=1
-    export function thingspeak4(key:string, value1: number, value2?:number, value3?:number, value4?:number, value5?:number, value6?:number, value7?:number):void {    
-        let b=""
-        let i
-        let value12:number[]=[value1,value2,value3,value4,value5,value6,value7]
-        for (i=0;i<7;i++)
-        {
-              if (i==0)
-              {
-                    b=value12[0].toString()
-              }else if (value12[i]!=null)
-              {
-                    let c=i+1
-                    b=b+"&field"+c.toString()+"="+value12[i].toString()
-              }
-        }
-        sendi2cmessage("t="+key+","+b)
-	basic.pause(200)
-    }
-    */
-    //% group="5.Thingspeak"      
-    //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
-    //% weight=101
-    export function thingspeak2(key:string, value1: number[]):void {
-        let a=value1.length
-        let b=""
-        let i
-        for (i=0;i<a;i++)
-        {
-              if (i==0)
-              {
-                    b=value1[0].toString()
-              }else
-              {
-                    let c=i+1
-                    b=b+"&field"+c.toString()+"="+value1[i].toString()
-              }
-        }
-        sendi2cmessage("t="+key+","+b)
-	basic.pause(200)
-    }
-
-      
-     //% group="5.Thingspeak"  
-     //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
-    //% weight=101
-    export function thingspeak3(key:number, value1: value555): string {
-        sendi2cmessage("tt="+convertToText(key)+","+convertToText(value1))
-	basic.pause(400)
-        let a=receivei2cmessage("ttt=").substr(1)
-	if (!a.includes("ttt"))
-	{
-           a=receivei2cmessage("ttt=").substr(1)
-	   basic.pause(200)
-	}
-        a=a.substr(3)
-        return a
-    }     
-
-	
-    //% group="6.IFTTT"  
+    //% group="5.IFTTT"  
     //% blockId=sendifttt block="send ifttt key %key | event %event | value1 %value1 | value2 %value2 | value3 %value3"
     //% weight=50
     export function sendifttt(key: string, event: string, value1: string, value2: string, value3: string):void {
@@ -241,7 +168,7 @@ namespace microbiti2cesp32v4 {
     }
 
 	
-    //% group="7.NTP"  
+    //% group="6.NTP"  
     //% blockId=ntpsetup block="NTP setup"
     //% weight=70
     export function ntpsetup():void {
@@ -250,7 +177,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
 	
-     //% group="7.NTP"  
+     //% group="6.NTP"  
     //% blockId=ntpget block="ntpget"
     //% weight=50
     export function ntpget():void {
@@ -270,7 +197,7 @@ namespace microbiti2cesp32v4 {
         return parseFloat(datelist[time1])
     }
 
-     //% group="8.google"  
+     //% group="7.google"  
     //% blockId=google1 block="set google form question %google_number as %google_ans" 
     //% weight=70
     export function google1(google_number: number, google_ans: string):void {
@@ -278,7 +205,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
 	
-    //% group="8.google"  
+    //% group="7.google"  
     //% blockId=google2 block="set google form url as %google_url" 
     //% weight=70
     export function google2(google_url: string):void {
@@ -286,7 +213,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
 	
-     //% group="8.google"  
+     //% group="7.google"  
     //% blockId=google block="Send to Google form"
     //% weight=30
     export function google():void {
@@ -294,7 +221,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
 	
-    //% group="9.HTTP_COMMAND"
+    //% group="8.HTTP_COMMAND"
     //% blockId=http_command block="Read HTTP COMMAND"
     //% weight=29
     //% blockExternalInputs = 1
@@ -308,7 +235,7 @@ namespace microbiti2cesp32v4 {
 	return a
     }
 	
-    //% group="9.HTTP_COMMAND"
+    //% group="8.HTTP_COMMAND"
     //% blockId=clear_httpcommand block="Clear HTTP COMMAND"
     //% weight=28
     export function clear_httpcommand():void {
@@ -316,7 +243,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
 	
-    //% group="9.HTTP_COMMAND"
+    //% group="8.HTTP_COMMAND"
     //% blockId=http_command1 block="Microbit data %data"
     //% weight=27
     export function http_command1(data: string):void {
