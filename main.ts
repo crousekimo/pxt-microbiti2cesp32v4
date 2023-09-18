@@ -262,6 +262,16 @@ namespace microbiti2cesp32v4 {
     export function http_href(data: string, text: string):string {
         return "<a href=http_d2="+data+">"+text+"</a>"
     }
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_href block="insert %num space"
+    //% weight=24
+    //% num.min=1
+    export function http_href(num: number):string {
+	let a="";
+	for (i=0;i<=num;i++)
+		a=a+"&nbsp;"
+        return "<a href=http_d2="+data+">"+text+"</a>"
+    }
 	
 	
     function sendi2cmessage(command: string):void {
