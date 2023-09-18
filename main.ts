@@ -265,14 +265,25 @@ namespace microbiti2cesp32v4 {
     //% group="8.HTTP_COMMAND"
     //% blockId=http_space block="insert %num space"
     //% weight=24
-    //% num.min=1
-    export function http_space(num: number):string {
+    export function http_space(num: number = 1):string {
 	let a="";
 	for (let i=0;i<num;i++)
 		a=a+"&nbsp;"
         return a
     }
-	
+
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_p block="paragraph font size %num "
+    //% weight=23
+    export function http_p(num: number = 1):string {
+        return "<p style=font-size:"+num+"vw;>"
+    }
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_p1 block="paragraph end"
+    //% weight=23
+    export function http_p1():string {
+        return "</p>"
+    }	
 	
     function sendi2cmessage(command: string):void {
         for (let index = 0; index <= command.length-1; index++) {
