@@ -287,7 +287,7 @@ namespace microbiti2cesp32v4 {
     export function http_p(num: number):string {
         return "<p style=font-size:"+num+"vw;>"
     }
-    //% group="9.HTTP_COMMAND"
+    //% group="9.HTTP_HTML"
     //% blockId=http_p1 block="paragraph end"
     //% weight=21
     export function http_p1():string {
