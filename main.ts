@@ -264,8 +264,9 @@ namespace microbiti2cesp32v4 {
     }
     //% group="8.HTTP_COMMAND"
     //% blockId=http_space block="insert %num space"
+    //% num.min=1 num.max=1000 num.defl=1
     //% weight=24
-    export function http_space(num: number = 1):string {
+    export function http_space(num: number):string {
 	let a="";
 	for (let i=0;i<num;i++)
 		a=a+"&nbsp;"
@@ -274,8 +275,9 @@ namespace microbiti2cesp32v4 {
 
     //% group="8.HTTP_COMMAND"
     //% blockId=http_p block="paragraph font size %num "
+    //% num.min=1 num.max=1000 num.defl=1
     //% weight=23
-    export function http_p(num: number = 1):string {
+    export function http_p(num: number):string {
         return "<p style=font-size:"+num+"vw;>"
     }
     //% group="8.HTTP_COMMAND"
