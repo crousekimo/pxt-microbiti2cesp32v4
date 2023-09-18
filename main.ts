@@ -250,7 +250,18 @@ namespace microbiti2cesp32v4 {
         sendi2cmessage("http_d="+data) 
 	basic.pause(200)
     }
-	
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_br block="br"
+    //% weight=26
+    export function http_br():string {
+        return "<br>"
+    }
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_href block="href=%data text %text"
+    //% weight=25
+    export function http_href(data: string, text: string):string {
+        return "<a href=http_d2="+data+">"+text+"</a>"
+    }
 	
 	
     function sendi2cmessage(command: string):void {
