@@ -268,9 +268,9 @@ namespace microbiti2cesp32v4 {
     //% num.min=1
     export function http_space(num: number):string {
 	let a="";
-	for (i=0;i<=num;i++)
+	for (let i=0;i<=num;i++)
 		a=a+"&nbsp;"
-        return "<a href=http_d2="+data+">"+text+"</a>"
+        return a
     }
 	
 	
