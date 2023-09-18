@@ -263,10 +263,10 @@ namespace microbiti2cesp32v4 {
         return "<a href=http_d2="+data+">"+text+"</a>"
     }
     //% group="8.HTTP_COMMAND"
-    //% blockId=http_href block="insert %num space"
+    //% blockId=http_space block="insert %num space"
     //% weight=24
     //% num.min=1
-    export function http_href(num: number):string {
+    export function http_space(num: number):string {
 	let a="";
 	for (i=0;i<=num;i++)
 		a=a+"&nbsp;"
