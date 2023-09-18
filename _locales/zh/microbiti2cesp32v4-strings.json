@@ -30,5 +30,7 @@
     "microbiti2cesp32v4.clearmqtt|block": "清除MQTT暫存的訊息與主題",
     "microbiti2cesp32v4.http_br|block": "分行",
     "microbiti2cesp32v4.http_href|block": "超連結傳送命令: %data 文字: %text",
-    "microbiti2cesp32v4.http_space|block": "插入 %num 個空白"
+    "microbiti2cesp32v4.http_space|block": "插入 %num 個空白",
+    "microbiti2cesp32v4.p|block": "段落字串大小為： %num ",
+    "microbiti2cesp32v4.p1|block": "段落結束"
 }
