@@ -27,5 +27,7 @@
     "microbiti2cesp32v4.http_command|block": "取得HTTP COMMAND",
     "microbiti2cesp32v4.clear_httpcommand|block": "清除暫存HTTP COMMAND",
     "microbiti2cesp32v4.http_command1|block": "網頁顯示microbit資料 %data",
-    "microbiti2cesp32v4.clearmqtt|block": "清除MQTT暫存的訊息與主題"
+    "microbiti2cesp32v4.clearmqtt|block": "清除MQTT暫存的訊息與主題",
+    "microbiti2cesp32v4.br|block": "分行",
+    "microbiti2cesp32v4.href|block": "超連結網址: %data 文字: %text"
 }
