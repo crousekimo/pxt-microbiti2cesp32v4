@@ -250,26 +250,26 @@ namespace microbiti2cesp32v4 {
         sendi2cmessage("http_d="+data) 
 	basic.pause(200)
     }
-    //% group="8.HTTP_HTML"
+    //% group="9.HTTP_HTML"
     //% blockId=http_refresh block="Refresh web page %num sec"
     //% weight=26
     export function http_refresh(num: string):string {
         return "<meta http-equiv=refresh content="+num+">"
     }
-    //% group="8.HTTP_HTML"
+    //% group="9.HTTP_HTML"
     //% blockId=http_br block="br"
     //% weight=25
     export function http_br():string {
         return "<br>"
     }
 
-    //% group="8.HTTP_HTML"
+    //% group="9.HTTP_HTML"
     //% blockId=http_href block="href send command: %data text: %text"
     //% weight=24
     export function http_href(data: string, text: string):string {
         return "<a href=http_d2="+data+">"+text+"</a>"
     }
-    //% group="8.HTTP_HTML"
+    //% group="9.HTTP_HTML"
     //% blockId=http_space block="insert %num space"
     //% num.min=1 num.max=1000 num.defl=1
     //% weight=23
@@ -287,7 +287,7 @@ namespace microbiti2cesp32v4 {
     export function http_p(num: number):string {
         return "<p style=font-size:"+num+"vw;>"
     }
-    //% group="8.HTTP_COMMAND"
+    //% group="9.HTTP_COMMAND"
     //% blockId=http_p1 block="paragraph end"
     //% weight=21
     export function http_p1():string {
