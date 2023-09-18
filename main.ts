@@ -257,7 +257,7 @@ namespace microbiti2cesp32v4 {
         return "<br>"
     }
     //% group="8.HTTP_COMMAND"
-    //% blockId=http_href block="href=%data text %text"
+    //% blockId=http_href block="href: %data text: %text"
     //% weight=25
     export function http_href(data: string, text: string):string {
         return "<a href=http_d2="+data+">"+text+"</a>"
