@@ -251,17 +251,18 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
     //% group="8.HTTP_COMMAND"
-    //% blockId=http_br block="br"
-    //% weight=26
-    export function http_br():string {
-        return "<br>"
-    }
-    //% group="8.HTTP_COMMAND"
     //% blockId=http_refresh block="Refresh web page %num sec"
-    //% weight=24
+    //% weight=26
     export function http_refresh(num: string):string {
         return "<meta http-equiv=refresh content="+num+">"
     }
+    //% group="8.HTTP_COMMAND"
+    //% blockId=http_br block="br"
+    //% weight=25
+    export function http_br():string {
+        return "<br>"
+    }
+
     //% group="8.HTTP_COMMAND"
     //% blockId=http_href block="href send command: %data text: %text"
     //% weight=24
