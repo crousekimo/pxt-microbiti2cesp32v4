@@ -257,15 +257,21 @@ namespace microbiti2cesp32v4 {
         return "<br>"
     }
     //% group="8.HTTP_COMMAND"
+    //% blockId=http_refresh block="Refresh web page %num sec"
+    //% weight=24
+    export function http_refresh(num: string):string {
+        return "<meta http-equiv=refresh content="+num+">"
+    }
+    //% group="8.HTTP_COMMAND"
     //% blockId=http_href block="href send command: %data text: %text"
-    //% weight=25
+    //% weight=24
     export function http_href(data: string, text: string):string {
         return "<a href=http_d2="+data+">"+text+"</a>"
     }
     //% group="8.HTTP_COMMAND"
     //% blockId=http_space block="insert %num space"
     //% num.min=1 num.max=1000 num.defl=1
-    //% weight=24
+    //% weight=23
     export function http_space(num: number):string {
 	let a="";
 	for (let i=0;i<num;i++)
@@ -276,13 +282,13 @@ namespace microbiti2cesp32v4 {
     //% group="8.HTTP_COMMAND"
     //% blockId=http_p block="paragraph font size %num "
     //% num.min=1 num.max=1000 num.defl=1
-    //% weight=23
+    //% weight=22
     export function http_p(num: number):string {
         return "<p style=font-size:"+num+"vw;>"
     }
     //% group="8.HTTP_COMMAND"
     //% blockId=http_p1 block="paragraph end"
-    //% weight=23
+    //% weight=21
     export function http_p1():string {
         return "</p>"
     }	
