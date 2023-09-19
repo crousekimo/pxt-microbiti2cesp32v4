@@ -337,10 +337,10 @@ namespace microbiti2cesp32v4 {
     //% weight=18 
     export function esp32_digitalread(pin: number):number {
         let a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
-	basic.pause(100)
+	basic.pause(200)
    	if (!a.includes("digitalRead"))
         a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
-	basic.pause(100)
+	basic.pause(200)
         a=a.substr(11) 
 	return parseFloat(a)
     } 
