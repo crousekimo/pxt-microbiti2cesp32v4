@@ -332,6 +332,30 @@ namespace microbiti2cesp32v4 {
         sendi2cmessage("analogWrite="+convertToText(pin)+","+convertToText(pin1))
 	basic.pause(200)
     }
+    //% group="9.ESP32_CONTROL"  
+    //% blockId=esp32_digitalread block="ESP32 digitalRead %pin"
+    //% weight=18 
+    export function esp32_digitalread(pin: number):number {
+        let a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
+	basic.pause(100)
+   	if (!a.includes("digitalRead"))
+        a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
+	basic.pause(100)
+        a=a.substr(11) 
+	return parseFloat(a)
+    } 
+    //% group="9.ESP32_CONTROL"  
+    //% blockId=esp32_analogread block="ESP32 analogRead %pin"
+    //% weight=17 
+    export function esp32_analogread(pin: number):number {
+        let a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
+	basic.pause(100)
+   	if (!a.includes("analogRead"))
+        a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
+	basic.pause(100)
+        a=a.substr(10) 
+	return parseFloat(a)
+    } 
 	
     function sendi2cmessage(command: string):void {
         for (let index = 0; index <= command.length-1; index++) {
