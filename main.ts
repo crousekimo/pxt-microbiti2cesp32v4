@@ -9,7 +9,10 @@ namespace microbiti2cesp32v4 {
         Humidity = 5,
 	WindSpeed = 6
      }
-
+     export enum pin_mode {
+        OUTPUT = 1,
+        INPUT = 2
+     }
      export enum ntptime {
         Your = 0,
         Month = 1,
@@ -306,6 +309,29 @@ namespace microbiti2cesp32v4 {
     export function http_p1():string {
         return "</p>"
     }	
+    //% group="9.ESP32_CONTROL"
+    //% blockId=esp32_pinmode block="Pin %pin as %pin1 "
+    //% weight=20
+    export function esp32_pinmode(pin: number, pin1: pin_mode):string {
+        sendi2cmessage("pinMode="+convertToText(pin)+","+convertToText(pin1))
+	basic.pause(200)
+    }
+    //% group="9.ESP32_CONTROL"
+    //% blockId=esp32_digitalwrite block="digitalWrite pin %pin as %pin1"
+    //% pin1.min=0 pin1.max=1 pin1.defl=0
+    //% weight=19
+    export function esp32_digitalwrite(pin:number, pin1: number):string {
+        sendi2cmessage("digitalWrite="+convertToText(pin)+","+convertToText(pin1))
+	basic.pause(200)
+    }
+    //% group="9.ESP32_CONTROL"
+    //% blockId=esp32_analogwrite block="digitalWrite pin %pin as %pin1"
+    //% pin1.min=0 pin1.max=255 pin1.defl=0
+    //% weight=19
+    export function esp32_analogwrite(pin:number, pin1: number):string {
+        sendi2cmessage("analogWrite="+convertToText(pin)+","+convertToText(pin1))
+	basic.pause(200)
+    }
 	
     function sendi2cmessage(command: string):void {
         for (let index = 0; index <= command.length-1; index++) {
