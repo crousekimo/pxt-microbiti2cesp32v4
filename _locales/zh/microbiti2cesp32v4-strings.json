@@ -35,5 +35,8 @@
     "microbiti2cesp32v4.http_p|block": "段落字串大小為： %num ",
     "microbiti2cesp32v4.http_p1|block": "段落結束",
     "microbiti2cesp32v4.http_center|block": "置中",
-    "microbiti2cesp32v4.http_center1|block": "置中結束"
+    "microbiti2cesp32v4.http_center1|block": "置中結束",
+    "microbiti2cesp32v4.esp32_pinmode|block": "腳位 %pin 設定為 %pin1",
+    "microbiti2cesp32v4.esp32_digitalwrite|block": "數位寫入腳位 %pin 值 %pin1",
+    "microbiti2cesp32v4.esp32_analogwrite|block": "類比寫入腳位 %pin 值 %pin1"
 }
