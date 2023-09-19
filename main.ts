@@ -310,14 +310,14 @@ namespace microbiti2cesp32v4 {
         return "</p>"
     }	
     //% group="9.ESP32_CONTROL"
-    //% blockId=esp32_pinmode block="Pin %pin as %pin1 "
+    //% blockId=esp32_pinmode block="ESP32 Pin %pin as %pin1 "
     //% weight=20
     export function esp32_pinmode(pin: number, pin1: pin_mode):void {
         sendi2cmessage("pinMode="+convertToText(pin)+","+convertToText(pin1))
 	basic.pause(200)
     }
     //% group="9.ESP32_CONTROL"
-    //% blockId=esp32_digitalwrite block="digitalWrite pin %pin as %pin1"
+    //% blockId=esp32_digitalwrite block="ESP32 digitalWrite pin %pin as %pin1"
     //% pin1.min=0 pin1.max=1 pin1.defl=0
     //% weight=19
     export function esp32_digitalwrite(pin:number, pin1: number):void {
@@ -325,7 +325,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
     //% group="9.ESP32_CONTROL"
-    //% blockId=esp32_analogwrite block="analogWrite pin %pin as %pin1"
+    //% blockId=esp32_analogwrite block="ESP32 analogWrite pin %pin as %pin1"
     //% pin1.min=0 pin1.max=255 pin1.defl=0
     //% weight=19
     export function esp32_analogwrite(pin:number, pin1: number):void {
