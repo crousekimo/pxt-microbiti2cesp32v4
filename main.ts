@@ -325,7 +325,7 @@ namespace microbiti2cesp32v4 {
 	basic.pause(200)
     }
     //% group="9.ESP32_CONTROL"
-    //% blockId=esp32_analogwrite block="digitalWrite pin %pin as %pin1"
+    //% blockId=esp32_analogwrite block="analogWrite pin %pin as %pin1"
     //% pin1.min=0 pin1.max=255 pin1.defl=0
     //% weight=19
     export function esp32_analogwrite(pin:number, pin1: number):void {
