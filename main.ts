@@ -348,9 +348,9 @@ namespace microbiti2cesp32v4 {
     //% weight=17 
     export function esp32_analogread(pin: number):number {
         let a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
-	basic.pause(100)
+	basic.pause(50)
         a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
-	basic.pause(100)
+	basic.pause(50)
         a=a.substr(10) 
 	return parseFloat(a)
     } 
