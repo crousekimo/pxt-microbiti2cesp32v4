@@ -338,7 +338,6 @@ namespace microbiti2cesp32v4 {
     export function esp32_digitalread(pin: number):number {
         let a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
 	basic.pause(150)
-   	if (!a.includes("digitalRead"))
         a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
 	basic.pause(150)
         a=a.substr(11) 
@@ -350,7 +349,6 @@ namespace microbiti2cesp32v4 {
     export function esp32_analogread(pin: number):number {
         let a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
 	basic.pause(100)
-   	if (!a.includes("analogRead"))
         a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
 	basic.pause(100)
         a=a.substr(10) 
