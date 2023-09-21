@@ -308,7 +308,7 @@ namespace microbiti2cesp32v4 {
     }	
     //% group="9.ESP32_CONTROL"
     //% blockId=esp32_pinmode block="ESP32 Pin %pin as %pin1 "
-    //% pin.min=1 num.max=39 pin.defl=1
+    //% pin.min=1 pin.max=39 pin.defl=1
     //% weight=20
     export function esp32_pinmode(pin: number, pin1: pin_mode):void {
         sendi2cmessage("pinMode="+convertToText(pin)+","+convertToText(pin1))
@@ -316,7 +316,7 @@ namespace microbiti2cesp32v4 {
     }
     //% group="9.ESP32_CONTROL"
     //% blockId=esp32_digitalwrite block="ESP32 digitalWrite pin %pin as %pin1"
-    //% pin.min=1 num.max=39 pin.defl=1
+    //% pin.min=1 pin.max=39 pin.defl=1
     //% pin1.min=0 pin1.max=1 pin1.defl=0
     //% weight=19
     export function esp32_digitalwrite(pin:number, pin1: number):void {
@@ -325,7 +325,7 @@ namespace microbiti2cesp32v4 {
     }
     //% group="9.ESP32_CONTROL"
     //% blockId=esp32_analogwrite block="ESP32 analogWrite pin %pin as %pin1"
-    //% pin.min=1 num.max=39 pin.defl=1
+    //% pin.min=1 pin.max=39 pin.defl=1
     //% pin1.min=0 pin1.max=255 pin1.defl=0
     //% weight=19
     export function esp32_analogwrite(pin:number, pin1: number):void {
@@ -334,7 +334,7 @@ namespace microbiti2cesp32v4 {
     }
     //% group="9.ESP32_CONTROL"  
     //% blockId=esp32_digitalread block="ESP32 digitalRead %pin"
-    //% pin.min=1 num.max=39 pin.defl=1
+    //% pin.min=1 pin.max=39 pin.defl=1
     //% weight=18 
     export function esp32_digitalread(pin: number):number {
         let a=receivei2cmessage("digitalRead="+pin.toString()).substr(1)
@@ -346,7 +346,7 @@ namespace microbiti2cesp32v4 {
     } 
     //% group="9.ESP32_CONTROL"  
     //% blockId=esp32_analogread block="ESP32 analogRead %pin"
-    //% pin.min=1 num.max=39 pin.defl=1
+    //% pin.min=1 pin.max=39 pin.defl=1
     //% weight=17 
     export function esp32_analogread(pin: number):number {
         let a=receivei2cmessage("analogRead="+pin.toString()).substr(1)
