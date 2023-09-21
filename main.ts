@@ -154,7 +154,6 @@ namespace microbiti2cesp32v4 {
     export function openweathermapreturn(option: openweathermapmenu):number {
         let a=receivei2cmessage("openweathermapreturn="+option.toString()).substr(1)
 	basic.pause(100)
-   	if (!a.includes("openweathermapreturn"))
         a=receivei2cmessage("openweathermapreturn="+option.toString()).substr(1)
 	basic.pause(100)
         a=a.substr(20) 
