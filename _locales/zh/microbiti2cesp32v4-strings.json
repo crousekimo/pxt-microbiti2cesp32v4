@@ -39,6 +39,6 @@
     "microbiti2cesp32v4.esp32_pinmode|block": "ESP32腳位 %pin 設定為 %pin1",
     "microbiti2cesp32v4.esp32_digitalwrite|block": "ESP32數位寫入腳位 %pin 值 %pin1",
     "microbiti2cesp32v4.esp32_analogwrite|block": "ESP32類比寫入腳位 %pin 值 %pin1",
-    "microbiti2cesp32v4.esp32_digitalread|block": "ESP32類比讀取腳位 %pin ",
+    "microbiti2cesp32v4.esp32_digitalread|block": "ESP32數位讀取腳位 %pin ",
     "microbiti2cesp32v4.esp32_analogread|block": "ESP32類比讀取腳位 %pin "
 }
