@@ -83,7 +83,7 @@ namespace microbiti2cesp32v4 {
         let a=receivei2cmessage("mqttrec=")
 	basic.pause(100)
    	if (!a.includes("mqttrec"))
-        a=receivei2cmessage("mqttrec=")
+             a=receivei2cmessage("mqttrec=")
         a=a.substr(8)
 	mqttlist=a.split(",")
 	return mqttlist[0]
@@ -230,9 +230,7 @@ namespace microbiti2cesp32v4 {
     export function http_command():string {
 	check()
         let a=receivei2cmessage("http_r=").substr(1)
-   	if (!a.includes("http_r"))
-           a=receivei2cmessage("http_r=").substr(1)
-	basic.pause(100)
+        a=receivei2cmessage("http_r=").substr(1)
         a=a.substr(6)
 	return a
     }
